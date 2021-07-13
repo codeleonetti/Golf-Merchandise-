@@ -20,6 +20,9 @@ class Brand extends React.Component{
     </>)
    
     }
+
+    merchandiseContainer(){}
+
 }
 export default Brand
 

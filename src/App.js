@@ -1,33 +1,59 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Header from './header';
-import MerchandiseList from "./merchandiseList"
-import Brand from "./brand.js"
-
-
-// const clubBrands = [
-//   'Titleist', 'Callaway', 'TaylorMade', 'Mizuno', 'Cobra', 'Ping', 'Cleveland',
-//   'Odyssey', 'Ben Hogan', 'Srixon', 
-// ]
-
+import Header from './containers/components/header';
+import MerchandiseList from "./containers/components/merchandiseList"
+import Brand from "./containers/components/brand.js"
+import Merchandise from "./containers/components/merchandise.js"
+import Footer from "./containers/components/footer.js"
+import {Switch, Route} from "react-router-dom"
 function App() { 
   // is where we add all other components
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {/* <h1>jds playing around</h1>
-        <h1>Making a Golf Merchandise Store</h1> */}
-        
-        <Brand/>
+    <div>
+
         <Header/>
-          <h4 className="merchTags">Clubs / Clothes / FootWear</h4>
+        <Switch>
+        <Route path="/" component={Brand}/>
+        <Merchandise />
         <MerchandiseList/>
-        
-        {console.log("yup im here",Brand)}
-          
-        
-          {/* <ul>
+        </Switch>
+        <Footer/>  
+       
+    </div>
+  );
+}
+
+export default App;
+
+// const brands = [
+//   'Titleist', 'Callaway', 'TaylorMade', 'Mizuno', 'Cobra', 'Ping', 'Cleveland',
+//   'Odyssey', 'Ben Hogan', 'Srixon', 
+//]
+
+
+// class App extends Component {
+//   state = {  
+//     allBrands:[
+//         'Titleist', 'Callaway', 'TaylorMade', 'Mizuno', 'Cobra', 'Ping', 'Cleveland',
+//         'Odyssey', 'Ben Hogan', 'Srixon', 'PXG', 'Nike', 'Greg Norman', 'Puma', 'Adidas',
+//         'Oakley', 'Under Armour', 'Foot Joy', 'Skechers'
+//     ] }
+//   render() { 
+//     const postingBrands=this.state.allBrands.map(brand =>{ return <h3>{brand}</h3>})
+    
+//     return (
+//       <div>
+//       <MerchandiseList/> 
+//       {postingBrands}
+      
+//       {/* //  <const postingBrands = {this.state.allBrands.map(brand => { return  <h3>{brand}</h3>}}/> */}
+//       {/* // //   <MerchandiseList/>
+//       // <postingBrands/> */}
+//       </div>
+//     )}
+//     }
+// export default App;
+ {/* <ul>
             {Brand.state.allBrands.map(names =>{ return( 
               <div className='brand names'>
               
@@ -36,21 +62,3 @@ function App() {
               </div>
             )})}
           </ul> */}
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;

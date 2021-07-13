@@ -1,7 +1,7 @@
 import { Component } from "react";
 
 class Header extends Component{
-    render(){ return( <h1>Golf Merchandise</h1>
+    render(){ return( <h1>On The Green</h1>
         // <h4>Clubs</h4>,
         // <h4>Clothes</h4>,
         // <h4>Footwear</h4>
