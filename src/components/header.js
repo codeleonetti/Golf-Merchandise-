@@ -1,16 +1,17 @@
-import { Component } from "react";
 
-class Header extends Component{
-    render(){ return( <h1>On The Green</h1>
-        // <h4>Clubs</h4>,
-        // <h4>Clothes</h4>,
-        // <h4>Footwear</h4>
+import React from 'react';
+
+
+const Header = () => {
+     return( <h1 className='headertag'>
+     On The Green</h1>
+        
         
         );}
     
 
 
-}
+
 export default Header;
 
 // to right out your Header from scratch in JS 

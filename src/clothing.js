@@ -1,16 +1,16 @@
-import React from 'react'
+// import React from 'react'
 
 
 
-const GolfClothing = (props)=>{
+// const GolfClothing = (props)=>{
 
-    return(<>
+//     return(<>
 
-        <h2>Clothing</h2>
-        <h5 onClick = {()=> {console.log("yup clicked as well")}} >{props.a}</h5>
+//         <h2>Clothing</h2>
+//         <h5 onClick = {()=> {console.log("yup clicked as well")}} >{props.a}</h5>
 
-    </>)
+//     </>)
 
-}
+// }
 
-export default GolfClothing
+// export default GolfClothing

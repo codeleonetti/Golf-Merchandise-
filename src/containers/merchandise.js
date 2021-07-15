@@ -1,13 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react';
+//import {connect} from 'react-redux';
+import {useSelector} from 'react-redux'
 
-import { render } from 'react-dom'
 
 
 
-const Merchandise = (props)=> {
-    
+
+const Merchandise = ()=> {
+    const merchList = useSelector((state) => state.allProducts.merchandise);
+    const {brand, product} = merchList;
     return(
-        <h3 onClick ={()=> console.log("you are clicking me")} >{props.a}</h3>
+        <div className='container'>
+            <div className='brand'>{brand}</div>
+            <div className='image'></div>
+            <div className='product'>{product}</div>   
+        </div>
+       
     )
 
 
@@ -15,7 +23,21 @@ const Merchandise = (props)=> {
 }
 
 
+// const Merchandise = (props)=> {
+//     console.log(props)
+    
+//     return(
+//         <div className='container'>
+            
+//         </div>
+       
+//     )
 
 
 
-export default Merchandise
+// }
+
+
+// export default connect(null, )(Merchandise);
+
+export default Merchandise;

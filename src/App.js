@@ -1,23 +1,33 @@
 
 import './App.css';
-import Header from './containers/components/header';
-import MerchandiseList from "./containers/components/merchandiseList"
-import Brand from "./containers/components/brand.js"
-import Merchandise from "./containers/components/merchandise.js"
-import Footer from "./containers/components/footer.js"
-import {Switch, Route} from "react-router-dom"
+import Header from './components/header';
+import MerchandiseList from "./containers/merchandiseList";
+import Brand from "./components/brand.js"
+import Merchandise from "./containers/merchandise.js"
+import Footer from "./components/footer.js"
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 function App() { 
   // is where we add all other components
   return (
     <div>
-
-        <Header/>
-        <Switch>
+        <Router>
+          <Header/>
+            <Switch>
+              <Route path='/' exact component={Brand}/>
+              <Route path='/merchandiseList' exact component={MerchandiseList}/>
+              <Route path='/merchandise' exact component={Merchandise}/>
+              <Route path='/merchandise/:productId' exact component={Merchandise}/>
+              <Route> 404 Not Found!</Route>
+            </Switch>
+          <Footer/>  
+        </Router>
+        
+        {/* <Switch>
         <Route path="/" component={Brand}/>
         <Merchandise />
-        <MerchandiseList/>
-        </Switch>
-        <Footer/>  
+         <MerchandiseList/>
+        </Switch> */}
+        
        
     </div>
   );
