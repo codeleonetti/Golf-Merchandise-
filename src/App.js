@@ -2,7 +2,7 @@
 import './App.css';
 import Header from './components/header';
 import MerchandiseList from "./containers/merchandiseList";
-import Brand from "./components/brand.js"
+import Brand from "./containers/company.js"
 import Merchandise from "./containers/merchandise.js"
 import Footer from "./components/footer.js"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
@@ -14,21 +14,13 @@ function App() {
           <Header/>
             <Switch>
               <Route path='/' exact component={Brand}/>
-              <Route path='/merchandiseList' exact component={MerchandiseList}/>
+              <Route path='/merchandiselist' exact component={MerchandiseList}/>
               <Route path='/merchandise' exact component={Merchandise}/>
               <Route path='/merchandise/:productId' exact component={Merchandise}/>
               <Route> 404 Not Found!</Route>
             </Switch>
           <Footer/>  
         </Router>
-        
-        {/* <Switch>
-        <Route path="/" component={Brand}/>
-        <Merchandise />
-         <MerchandiseList/>
-        </Switch> */}
-        
-       
     </div>
   );
 }

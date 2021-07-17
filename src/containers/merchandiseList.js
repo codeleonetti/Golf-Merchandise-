@@ -1,24 +1,70 @@
-import React from 'react';
-//import {connect} from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {fetchMerch} from '../redux/actions/index'
+// need to import our action set products 
 import Merchandise from "./merchandise";
 import {useSelector} from 'react-redux'
 
- const MerchandiseList = ()=>{
-           const merchList = useSelector((state) => state);
-            console.log(merchList);
-           
-            
-           
-            return(
-                <div className='containerlist'>
-                    <Merchandise/>
-                </div>
-
-           
-            );
-
-
+class MerchandiseList extends Component {
+componentDidMount(){ 
+    this.props.fetchMerch()
 }
+
+render(){
+    const allMerch = this.props.stateOfMerch.map( (product) =>{ return <Merchandise key={product.id} p={product}/>})
+   console.log(this.props.stateOfMerch)
+    return(
+        <div>
+            {allMerch}
+        </div>
+    )
+}
+
+ }
+
+const mapStateToProps =(state)=>{
+    // console.log(state)
+    return{
+        stateOfMerch: state.allProducts.merchandise
+    }
+}
+ 
+export default connect(mapStateToProps,{fetchMerch})(MerchandiseList);
+
+
+    // const MerchandiseList = ()=>{
+    //     const merchList = useSelector((state) => state);
+    //     console.log(merchList)
+     //need to ude dispatch to add data in store with an action
+    
+
+    // fetch our data here
+    // dispatch and setproducts  response.data
+    // const fetchMerch = () =>{
+    //     //  return(dispatch) => {
+    //         return fetch('http://localhost:3000/merchandises')
+    //         .then(resp => resp.json())
+    //         .then(merch => { console.log(merch)
+    
+    //             // dispatch({ type: SET_PRODUCTS, payload: merch})
+    //         })
+    //     }
+
+    // useEffect(() => {
+    //     fetchMerch();
+    // }, []);
+    //console.log(merchList)
+    // return(
+    
+    //     {allMerch}
+    //  );
+    //  key={product.id} p={product}
+
+
+
+
+
+
 // const MerchandiseList = (props)=>{
 //     console.log(props)
         
@@ -39,7 +85,7 @@ import {useSelector} from 'react-redux'
 //     }
 // }
 
-export default MerchandiseList;
+
 
 // export default connect(MerchandiseList);
  // the array of data:
