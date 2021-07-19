@@ -1,21 +1,27 @@
 import React, {Component} from 'react';
+//import {Component} from 'react';
 import {connect} from 'react-redux';
-import {fetchMerch} from '../redux/actions/index'
+import {fetchMerch} from '../redux/actions/index.js'
 // need to import our action set products 
 import Merchandise from "./merchandise";
 import {useSelector} from 'react-redux'
 
 class MerchandiseList extends Component {
+    // constructor(props) {super (props);
+    //     this.state={ merchList: []}
+    // }
 componentDidMount(){ 
     this.props.fetchMerch()
 }
 
-render(){
-    const allMerch = this.props.stateOfMerch.map( (product) =>{ return <Merchandise key={product.id} p={product}/>})
-   console.log(this.props.stateOfMerch)
+render(){ console.log(this.props)
+     const allMerch = this.props.stateOfMerch.map( (product) =>{ return <Merchandise key={product.id} p={product}/>})
+        console.log(this.props.stateOfMerch)
+// const merch = <h2> please please please render </h2>
     return(
         <div>
             {allMerch}
+            {/* {merch} */}
         </div>
     )
 }
@@ -29,7 +35,13 @@ const mapStateToProps =(state)=>{
     }
 }
  
-export default connect(mapStateToProps,{fetchMerch})(MerchandiseList);
+export default connect(mapStateToProps, {fetchMerch} )(MerchandiseList);
+
+
+
+
+
+
 
 
     // const MerchandiseList = ()=>{

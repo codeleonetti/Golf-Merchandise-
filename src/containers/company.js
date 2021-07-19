@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchCompany} from '../redux/actions/index'
 // need to import our action set products 
-import Merchandise from "./merchandise";
+
 
 class Company extends Component {
     componentDidMount(){ 
@@ -10,11 +10,15 @@ class Company extends Component {
     }
     
     render(){
-        const allMerch = this.props.stateOfCompany.map( (product) =>{ return <Merchandise key={product.id} p={product}/>})
-       console.log(this.props.stateOfMerch)
+       // const allCompanies = this.stateOfCompany.map( (company) =>{ return console.log("render me", company)})
+       const company = <h2>yup</h2>
+       
+       console.log(this.props.stateOfCompany)
         return(
-            <div>
-                {allMerch}
+            <div className="companies">
+            <h1>Click a Company</h1>
+                {company}
+                {/* {allCompanies} */}
             </div>
         )
     }
@@ -22,13 +26,13 @@ class Company extends Component {
     }
     
     const mapStateToProps =(state)=>{
-        // console.log(state)
-        return{
-            stateOfCompany: state.allProducts.company
-        }
+         console.log(state)
+        // return{
+        //     stateOfCompany: state.allProducts.company
+        // }
     }
      
-    export default connect(mapStateToProps,{fetchCompany})(Company);
+    export default connect(null,mapStateToProps,{fetchCompany})(Company);
     
 
 

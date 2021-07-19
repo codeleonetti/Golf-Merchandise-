@@ -1,4 +1,4 @@
-// import React, {useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {ActionTypes} from '../constants/action-types'
 export const fetchMerch = () =>{
       return(dispatch) => {
@@ -7,6 +7,7 @@ export const fetchMerch = () =>{
         .then(merch => { console.log("please render me",merch)
 
              dispatch({ type: ActionTypes.SET_PRODUCTS, payload: merch})
+            // dispatch({ type: "FETCH_MERCH", payload: merch})
         })
     
     }
@@ -18,7 +19,8 @@ export const fetchCompany = () =>{
       .then(resp => resp.json())
       .then(company => { console.log("please render me",company)
 
-           dispatch({ type: ActionTypes.SET_PRODUCTS, payload: company})
+          dispatch({ type: ActionTypes.SET_COMPANIES, payload: company})
+           //dispatch({ type: "FETCH_COMPANY", payload: company})
       })
   
   }

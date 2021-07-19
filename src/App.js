@@ -2,7 +2,7 @@
 import './App.css';
 import Header from './components/header';
 import MerchandiseList from "./containers/merchandiseList";
-import Brand from "./containers/company.js"
+import Company from "./containers/company.js"
 import Merchandise from "./containers/merchandise.js"
 import Footer from "./components/footer.js"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
@@ -13,7 +13,7 @@ function App() {
         <Router>
           <Header/>
             <Switch>
-              <Route path='/' exact component={Brand}/>
+              <Route path='/' exact component={Company}/>
               <Route path='/merchandiselist' exact component={MerchandiseList}/>
               <Route path='/merchandise' exact component={Merchandise}/>
               <Route path='/merchandise/:productId' exact component={Merchandise}/>

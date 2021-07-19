@@ -1,8 +1,14 @@
 import { combineReducers } from 'redux';
 import {merchandiseReducer} from './merchandiseReducer';
-import {companyReducer} from './companyReducer';
+import companyReducer from './companyReducer';
+
+// export default combineReducers({
+//     merchandiseReducer,
+// })
+
+
 const reducers = combineReducers({
-    allProducts: merchandiseReducer, companyReducer, 
+    allProducts: merchandiseReducer,  
 });
 
 export default reducers;
