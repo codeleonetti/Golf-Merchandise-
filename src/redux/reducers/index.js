@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import {merchandiseReducer} from './merchandiseReducer';
 import {companyReducer} from './companyReducer';
-
+import { companyMerchReducer } from './companyMerchReducer';
 // export default combineReducers({
 //     merchandiseReducer,
 // })
@@ -9,7 +9,8 @@ import {companyReducer} from './companyReducer';
 
 const reducers = combineReducers({
     allProducts: merchandiseReducer, 
-    companyReducer
+    companyReducer,
+    companyMerchReducer
 });
 
 export default reducers;

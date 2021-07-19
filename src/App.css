@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.companyImage  {
+  margin: 20px;
+
+}
+
+.headertag { 
+  text-align: center;
+  height: 100px;
+  background-color: rgb(16, 114, 81);
+
+}

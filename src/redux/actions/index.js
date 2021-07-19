@@ -26,6 +26,17 @@ export const fetchCompany = () =>{
   }
 }
 
+export const fetchCompanyMerch = (id) =>{
+    return(dispatch) => {
+        fetch(`http://localhost:3000/companies/${id}/merchandises`)
+        .then (resp => resp.json())
+        .then(companyMerch => { console.log("rendering", companyMerch)
+            dispatch({ type: ActionTypes.SELECTED_PRODUCTS, payload: companyMerch})
+           
+    })
+    }
+}
+
 
 // useEffect(() => {
     //     fetchMerch();

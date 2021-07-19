@@ -10,13 +10,15 @@ class Company extends Component {
     }
     
     render(){
-       const allCompanies = this.props.stateOfCompany.map( (company) =>{ return (<><h1>{company.name}</h1> <img src={company.image}/></>)})
+       const allCompanies = this.props.stateOfCompany.map( (company) =>{ return (<div className="companyImage">
+       <img src={company.image}/>
+       </div>)})
       
        
        console.log(this.props.stateOfCompany)
         return(
             <div className="companies">
-            <h1>Click a Company</h1>
+            
                 
                 {allCompanies}
             </div>

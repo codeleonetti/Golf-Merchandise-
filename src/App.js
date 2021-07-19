@@ -4,6 +4,7 @@ import Header from './components/header';
 import MerchandiseList from "./containers/merchandiseList";
 import Company from "./containers/company.js"
 import Merchandise from "./containers/merchandise.js"
+import CompanyMerchandise from './containers/companyMerchandise';
 import Footer from "./components/footer.js"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 function App() { 
@@ -17,6 +18,7 @@ function App() {
               <Route path='/merchandiselist' exact component={MerchandiseList}/>
               <Route path='/merchandise' exact component={Merchandise}/>
               <Route path='/merchandise/:productId' exact component={Merchandise}/>
+              <Route path='/company/:company_id/merchandises' exact component={CompanyMerchandise}/>
               <Route> 404 Not Found!</Route>
             </Switch>
           <Footer/>  

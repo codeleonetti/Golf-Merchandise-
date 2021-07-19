@@ -14,9 +14,9 @@ export const setProducts = (products) => {
     };
 };
 
-export const selectedProducts = (product) => {
+export const selectedProducts = (companyMerch) => {
     return {
-        type: ActionTypes.SELECTED_PRODUCT,
-        payload: product,
+        type: ActionTypes.SELECTED_PRODUCTS,
+        payload: companyMerch,
     };
 };
