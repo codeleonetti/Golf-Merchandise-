@@ -10,15 +10,15 @@ class Company extends Component {
     }
     
     render(){
-       // const allCompanies = this.stateOfCompany.map( (company) =>{ return console.log("render me", company)})
-       const company = <h2>yup</h2>
+       const allCompanies = this.props.stateOfCompany.map( (company) =>{ return (<><h1>{company.name}</h1> <img src={company.image}/></>)})
+      
        
        console.log(this.props.stateOfCompany)
         return(
             <div className="companies">
             <h1>Click a Company</h1>
-                {company}
-                {/* {allCompanies} */}
+                
+                {allCompanies}
             </div>
         )
     }
@@ -27,12 +27,12 @@ class Company extends Component {
     
     const mapStateToProps =(state)=>{
          console.log(state)
-        // return{
-        //     stateOfCompany: state.allProducts.company
-        // }
+        return{
+            stateOfCompany: state.companyReducer.company
+        }
     }
      
-    export default connect(null,mapStateToProps,{fetchCompany})(Company);
+    export default connect(mapStateToProps,{fetchCompany})(Company);
     
 
 
