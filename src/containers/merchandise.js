@@ -6,8 +6,7 @@ const Merchandise = (props)=> {
     const {image,product,price}=props.p
     
     return(
-        <div className='container'>
-            
+        <div className='container marginable'>
             <div className="image"><img src={image}/></div>
             <div className="product">{product}</div>
             <div className="price">{price}</div>

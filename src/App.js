@@ -1,6 +1,7 @@
 
 import './App.css';
 import Header from './components/header';
+import NavBar from './components/navBar';
 import MerchandiseList from "./containers/merchandiseList";
 import Company from "./containers/company.js"
 import Merchandise from "./containers/merchandise.js"

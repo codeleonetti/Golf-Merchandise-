@@ -19,7 +19,7 @@ render(){ console.log(this.props)
         console.log(this.props.stateOfMerch)
 // const merch = <h2> please please please render </h2>
     return(
-        <div>
+        <div className='main-container'>
             {allMerch}
             {/* {merch} */}
         </div>
