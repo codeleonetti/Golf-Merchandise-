@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchCompany} from '../redux/actions/index'
+import { NavLink } from 'react-router-dom';
 // need to import our action set products 
 
 
@@ -11,7 +12,7 @@ class Company extends Component {
     
     render(){
        const allCompanies = this.props.stateOfCompany.map( (company) =>{ return (<div className="companyImage">
-       <img src={company.image}/>
+        <NavLink to="/company/:company_id/merchandises"><img src={company.image}/></NavLink> 
        </div>)})
       
        

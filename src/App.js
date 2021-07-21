@@ -7,6 +7,8 @@ import Company from "./containers/company.js"
 import Merchandise from "./containers/merchandise.js"
 import CompanyMerchandise from './containers/companyMerchandise';
 import Footer from "./components/footer.js"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Container, Row, Col } from 'react-bootstrap';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 function App() { 
   // is where we add all other components
@@ -14,6 +16,7 @@ function App() {
     <div>
         <Router>
           <Header/>
+          <NavBar/>
             <Switch>
               <Route path='/' exact component={Company}/>
               <Route path='/merchandiselist' exact component={MerchandiseList}/>

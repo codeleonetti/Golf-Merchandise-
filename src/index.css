@@ -15,28 +15,39 @@ code {
   margin: 20px;
 }
 
-.main-container{
+/* .main-container{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-.container {
+} */
+/* .container {
+  border: black solid 3px;
+  margin: 20px;
+   text-align: center;
+  height: auto;
+  width: 10px;
+  padding: 5px; 
+  } */
+
+.rows {
   border: black solid 3px;
   text-align: center;
   height: auto;
   width: 10px;
   padding: 5px;
 }
-.companyImage  {
+.columns{
+  border: black solid 3px;
+}
+/* .companyImage  {
   margin: 20px;
 
-}
+} */
 
 .headertag { 
   text-align: center;
   height: 100px;
   /* font-size: larger; */
-  
   background-color: rgb(16, 114, 81); 
 }
 
