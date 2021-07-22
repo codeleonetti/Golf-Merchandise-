@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchCompanyMerch} from '../redux/actions/index'
 import Merchandise from './merchandise';
-
+import Company from './company';
 
 class CompanyMerchandise extends Component{
     componentDidMount(){
@@ -14,10 +14,16 @@ class CompanyMerchandise extends Component{
        
 
         return(
-            <div>
             
-            {companyMerch}
+            <div>
+                <div class="container-fluid mb-4">
+                    <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                        {companyMerch}
+                    </div>
+                </div>
             </div>
+           
+        
         )
     }
 }

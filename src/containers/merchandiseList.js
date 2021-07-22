@@ -1,15 +1,11 @@
 import React, {Component} from 'react';
-//import {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchMerch} from '../redux/actions/index.js'
-// need to import our action set products 
 import Merchandise from "./merchandise";
 import {useSelector} from 'react-redux'
 
 class MerchandiseList extends Component {
-    // constructor(props) {super (props);
-    //     this.state={ merchList: []}
-    // }
+    
 componentDidMount(){ 
     this.props.fetchMerch()
 }
@@ -17,19 +13,20 @@ componentDidMount(){
 render(){ console.log(this.props)
      const allMerch = this.props.stateOfMerch.map( (product) =>{ return <Merchandise key={product.id} p={product}/>})
         console.log(this.props.stateOfMerch)
-// const merch = <h2> please please please render </h2>
-    return(
-        <div className='main-container'>
-            {allMerch}
-            {/* {merch} */}
+    return(  
+        <div>
+            <div class="container-fluid mb-4">
+                <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                    {allMerch}
+                </div>
+            </div>
         </div>
     )
 }
-
- }
+}
 
 const mapStateToProps =(state)=>{
-    // console.log(state)
+    
     return{
         stateOfMerch: state.allProducts.merchandise
     }

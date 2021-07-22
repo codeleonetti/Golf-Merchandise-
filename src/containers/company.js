@@ -12,7 +12,7 @@ class Company extends Component {
     
     render(){
        const allCompanies = this.props.stateOfCompany.map( (company) =>{ return (<div className="companyImage">
-        <NavLink to="/company/:company_id/merchandises"><img src={company.image}/></NavLink> 
+        <NavLink to={`/company/${company.id}/merchandises`}><img src={company.image}/></NavLink> 
        </div>)})
       
        
