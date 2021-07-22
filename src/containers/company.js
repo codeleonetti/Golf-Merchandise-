@@ -18,9 +18,7 @@ class Company extends Component {
        
        console.log(this.props.stateOfCompany)
         return(
-            <div className="companies">
-            
-                
+            <div className="companies marginable">
                 {allCompanies}
             </div>
         )

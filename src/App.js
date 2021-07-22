@@ -2,6 +2,7 @@
 import './App.css';
 import Header from './components/header';
 import NavBar from './components/navBar';
+import AboutUs from './components/aboutus';
 import MerchandiseList from "./containers/merchandiseList";
 import Company from "./containers/company.js"
 import Merchandise from "./containers/merchandise.js"
@@ -21,7 +22,7 @@ function App() {
               <Route path='/' exact component={Company}/>
               <Route path='/merchandiselist' exact component={MerchandiseList}/>
               <Route path='/merchandise' exact component={Merchandise}/>
-              <Route path='/merchandise/:productId' exact component={Merchandise}/>
+              <Route path='/components/aboutus' exact component={AboutUs}/>
               <Route path='/company/:company_id/merchandises' exact component={CompanyMerchandise}/>
               <Route> 404 Not Found!</Route>
             </Switch>
