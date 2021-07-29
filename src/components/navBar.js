@@ -3,13 +3,18 @@ import React from 'react';
 
 
 
-const NavBar = () => {
+export const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="nav-link active" aria-current="page" href="/">Home Page</a>
-            <a className="nav-link" href="/merchandiselist">The Merchandise</a>
-            <a className="nav-link" href="/components/aboutus">About Us</a>
-            <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <div class="container-fluid">
+                <a className="nav-link active" aria-current="page" href="/">Home Page</a>
+                <a className="nav-link" href="/merchandiselist">The Merchandise</a>
+                <a className="nav-link" href="/components/aboutus">About Us</a>
+                
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+               
+            </div>
         </nav>
         
            
@@ -17,9 +22,5 @@ const NavBar = () => {
      );
 }
  
-export default NavBar;
 
-{/* <div className="navBar">
-            <NavLink to="/">Home</NavLink>|
-            <NavLink to="/merchandiseList"> All Products </NavLink>|
-        </div> */}
+
