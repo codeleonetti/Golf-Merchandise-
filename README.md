@@ -1,5 +1,4 @@
 
-
 Golf Merchandise online store
 
 This is FrontEnd for the project Golf-Merchandise. The Backend is git@github.com:codeleonetti/Golf-merch-store-backend.git

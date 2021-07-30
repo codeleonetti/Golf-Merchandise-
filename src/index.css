@@ -1,7 +1,19 @@
 body {
-  background-image:    url(https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80)
-  var(--bs-gradient);
+  /* height: 100%; */
+  
 }
+/* .background {
+  background-image: url(https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.background:after {
+    content: ' ';
+    position: absolute;
+    left: 0;  right: 0; top: 0; bottom: 0; 
+    background-color: rgba(255,255,255, 0.3);
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -23,18 +35,21 @@ code {
 }
 
 
-.headertag { 
+.header { 
   text-align: center;
-  height: 100px;
-  /* background-image: url(https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80); */
+  height: 160px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-image: url(https://www.freewpheaders.com/wp-content/gallery/golf/golf-ball-header-image.jpg); 
    
 }
 /* .bg-gradient {
  
  
 } */
-.headertag h1{
-  font-family: 'Allerta Stencil', sans-serif;
+.header h1{
+  font-family: 'Allerta Stencil';
   font-size: 75px ;
 
 }

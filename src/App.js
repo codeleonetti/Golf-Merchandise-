@@ -16,8 +16,8 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 function App() { 
   // is where we add all other components
   return (
-    <div>
-      <Layout>
+    <div className="background">
+      {/* <Layout> */}
         <Router>
           <Header/>
           <NavBar/>
@@ -32,7 +32,7 @@ function App() {
             </Switch>
           <Footer/>
         </Router>
-      </Layout>   
+      {/* </Layout>    */}
     </div>
   );
 }
