@@ -10,11 +10,10 @@ class CompanyMerchandise extends Component{
     }
 
      render(){console.log()
-        const companyMerch = this.props.stateOfCompanyMerch.map( (product) =>{ return <Merchandise key={product.id} p={product}/>})
+        const companyMerch = this.props.stateOfCompanyMerch.map( (product) =>{ return <Merchandise key={product.id} {...product}/>})
        
 
-        return(
-            
+        return( 
             <div>
                 <div class="container-fluid mb-4">
                     <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
@@ -22,8 +21,6 @@ class CompanyMerchandise extends Component{
                     </div>
                 </div>
             </div>
-           
-        
         )
     }
 }

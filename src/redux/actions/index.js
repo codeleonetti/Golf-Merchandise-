@@ -7,7 +7,7 @@ export const fetchMerch = () =>{
         .then(merch => { console.log("please render me",merch)
 
              dispatch({ type: ActionTypes.SET_PRODUCTS, payload: merch})
-            // dispatch({ type: "FETCH_MERCH", payload: merch})
+            
         })
     
     }
@@ -18,12 +18,10 @@ export const fetchCompany = () =>{
       fetch('http://localhost:3000/companies')
       .then(resp => resp.json())
       .then(company => { console.log("please render me",company)
-
-          dispatch({ type: ActionTypes.SET_COMPANIES, payload: company})
-           //dispatch({ type: "FETCH_COMPANY", payload: company})
-      })
-  
-  }
+            dispatch({ type: ActionTypes.SET_COMPANIES, payload: company})
+           
+        })
+    }
 }
 
 export const fetchCompanyMerch = (id) =>{
@@ -33,14 +31,22 @@ export const fetchCompanyMerch = (id) =>{
         .then(companyMerch => { console.log("rendering", companyMerch)
             dispatch({ type: ActionTypes.SELECTED_PRODUCTS, payload: companyMerch})
            
-    })
+        })
+    }
+}
+
+export const addNewProducts = (newProducts) =>{
+    return(dispatch) => {
+        fetch('http://localhost:3000/merchandises', {
+            method: 'POST',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({merchandise: newProducts})
+        })
+        .then(resp => resp.json())
+        .then(newProducts => {
+            dispatch({ type: ActionTypes.ADD_PRODUCTS, payload: newProducts})
+        })
     }
 }
 
 
-// useEffect(() => {
-    //     fetchMerch();
-    // }, []);
-
-
-// export default fetchMerch;

@@ -1,8 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-const Merchandise = (props)=> {
-    const {image,product,price}=props.p
+const Merchandise = ({image,product,price})=> {
     const {widthProp}="20%"
     console.log(image, product, price)
     
@@ -18,9 +17,6 @@ const Merchandise = (props)=> {
        </div>
     )
 }
-
-
-
 
 
 export default connect(null, )(Merchandise);

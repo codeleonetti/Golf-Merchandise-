@@ -1,4 +1,4 @@
-// stretch Goal
+// stretch Goals
 
 // Search and Counter
 // import React from 'react';

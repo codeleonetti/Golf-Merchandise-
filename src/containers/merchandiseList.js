@@ -12,15 +12,13 @@ class MerchandiseList extends Component {
     }
 
     render(){ console.log(this.props)
-        const allMerch = this.props.stateOfMerch.map( (product) =>{ return <Merchandise key={product.id} p={product}/>})
+        const allMerch = this.props.stateOfMerch.map( (product) =>{ return <Merchandise key={product.id} {...product}/>})
             console.log(this.props.stateOfMerch)
         return (  
             <div>
                 <div class="container-fluid mb-4">
                     <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 d-flex align-items-stretch">
-                        {/* <div class="col-lg-4 d-flex align-items-stretch"> */}
                         {allMerch}
-                        {/* </div> */}
                     </div>
                 </div>
             </div>

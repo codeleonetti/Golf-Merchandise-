@@ -20,3 +20,10 @@ export const selectedProducts = (companyMerch) => {
         payload: companyMerch,
     };
 };
+
+export const addProducts = (addedProducts) => {
+    return {
+        type: ActionTypes.ADD_PRODUCTS,
+        payload: addedProducts
+    }
+}
