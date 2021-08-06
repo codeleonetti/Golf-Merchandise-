@@ -6,6 +6,7 @@ export const NavBar = () => {
             <div class="container-fluid">
                 <a className="nav-link active" aria-current="page" href="/">Home Page</a>
                 <a className="nav-link" href="/merchandiselist">The Merchandise</a>
+                <a className="nav-link" href="/merchandises"> Add A Product</a>
                 <a className="nav-link" href="/components/aboutus">About Us</a>  
             </div>
         </nav>

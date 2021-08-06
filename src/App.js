@@ -19,10 +19,10 @@ function App() {
         <Router>
           <Header/>
           <NavBar/>
-          <NewMerch/>
           <Switch>
               <Route path='/' exact component={Company}/>
               <Route path='/merchandiselist' exact component={MerchandiseList}/>
+              <Route path='/merchandises' exact component={NewMerch}/>
               <Route path='/components/aboutus' exact component={AboutUs}/>
               <Route path='/company/:company_id/merchandises' exact component={CompanyMerchandise}/>
               <Route> 404 Not Found!</Route>

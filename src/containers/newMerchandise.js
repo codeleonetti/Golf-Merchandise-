@@ -34,14 +34,14 @@ class NewMerch extends Component {
                 <br></br>
                     <input type='text'
                     placeholder="Product Name"
-                    value={this.state.products}
+                    value={this.state.product}
                     onChange={this.onChangeHandler}
                     name="product"
                     />
                     <br></br>
                     <input type='text'
                     placeholder="Product category"
-                    value={this.state.categories}
+                    value={this.state.category}
                     onChange={this.onChangeHandler}
                     name="category"
                     />
