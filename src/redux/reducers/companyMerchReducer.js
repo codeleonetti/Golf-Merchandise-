@@ -3,8 +3,6 @@ const intialState ={
     companyMerch:[]
 }
 
-
-
 export const companyMerchReducer = (state = intialState, {type, payload}) => {
     switch (type) {
         case ActionTypes.SELECTED_PRODUCTS:
